@@ -166,6 +166,7 @@ li
   #portrait {
     float: right;
     width: 38%;
+    padding-left: 50px;
   }
 }
 @media (max-width: 768px) {
@@ -181,7 +182,6 @@ li
   /* max-width: 38%; */
   display: block;
   height: auto;
-  padding-left: 50px;
   margin-top: 10px;
   margin-bottom: 30px;
 }
