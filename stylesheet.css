@@ -9,10 +9,7 @@ html, body, div, span, h2, h4, hr, img, header, nav, footer
   background-color: transparent;
 }
 
-img
-{
-  max-width: 25%;
-}
+
 
 
 html
@@ -20,56 +17,83 @@ html
   overflow-y: scroll;
 }
 
+nav
+{
+  text-align: right;
+  max-width: 1100px;
+  margin: 0 auto;          /* centers the content div on the page */
+  padding: 20px 50px 50px;  /* makes room for the header, leaves some space at the sides of the page */
+
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 200;
+}
 
 body
 {
   padding-bottom: 200px;  /* leaves some space at the bottom of the page */
-  width: 100%;
-  font-family: Palatino;
-  font-size: 16px;
+  font-family: Helvetica;
+  font-size: 18px;
   line-height: 150%;
   font-weight: 200;
 }
 
 h1
 {
-text-align:center;
-font-family: Palatino, STHeiti;
-font-style:normal;
-font-weight:200;
-font-size: 36px;
+text-align: center;
+font-family: Helvetica, STHeiti;
+font-style: normal;
+font-weight: 20;
+font-size: 44px;
 line-height: 23px;
 letter-spacing: 2px;
 margin: 2%;
-color:#2554C7;
-padding-bottom: 30px;
+padding-bottom: 70px;
 
 }
 
 h2
 {
-  margin-top: 40px;
-  font-family: Palatino;
+  margin-top: 20px;
+  font-family: Helvetica;
   font-style: normal;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 400;
   line-height: 23px;
-  color:#2554C7;
+  padding-bottom: 10px;
+
 }
 
 h3
 {
   margin-top: 10px;
   margin-left: 10px;
-  font-family: Palatino;
+  font-family: Helvetica;
   font-style: normal;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 23px;
-  color:#2554C7;
+  padding-top: 10px;
+
 }
 
 
+/* 
+  Color options
+    Blue: #2554C7
+    Green: #387C44
+    Purple: #9932CC
+    Dark Red: #7A303F
+
+    Caltech: #FF6C0C
+    Tsinghua: #6D2077, #E24585
+*/
+
+#hcolor
+{
+  color:#2554C7;
+}
 
 /* all links will be crimson, and displayed without an underline, hover grey */
 a:link,
@@ -79,20 +103,34 @@ a:visited
   text-decoration: none;
 }
 
+#Caltech
+{
+  color: #FF6C0C;
+  text-decoration: none;
+}
+
+#Tsinghua
+{
+  color: #6D2077;
+  text-decoration: none;
+}
+
 a:hover,
-a:visited:hover
+a:visited:hover, #Caltech:hover, #Tsinghua:hover
 {
   color: #9932CC;
   text-decoration: none;
 }
 
 
-hr
+
+#sep
 {
   width: 100%;
   height: 2px;
   background-color: #999999;
-  a
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 
@@ -100,7 +138,7 @@ hr
 {
   margin: 0 auto;          /* centers the content div on the page */
   padding: 0px 50px 0px;  /* makes room for the header, leaves some space at the sides of the page */
-  width: 800px;
+  max-width: 1100px;
 }
 
 
@@ -114,7 +152,7 @@ li
 #paperinfo
 {
   margin-top: -5px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 125%;
   font-weight: 100;
 }
@@ -123,11 +161,28 @@ li
 
 /* makes table header cells left-aligned and non-bold */
 
+
+@media (min-width: 769px) {
+  #portrait {
+    float: right;
+    width: 38%;
+  }
+}
+@media (max-width: 768px) {
+  #portrait {
+    margin-left: auto;
+    margin-right: auto;    
+    width: 60%;
+  }
+}
+
 #portrait
 {
-  float: right;
+  /* max-width: 38%; */
+  display: block;
+  height: auto;
   padding-left: 50px;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 30px;
 }
 
@@ -147,9 +202,8 @@ li
   text-align: left;
   font-weight: normal;
 
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 200;
-  color:#2554C7;
   padding: 0 5px 5px 0;
 }
 
@@ -175,7 +229,7 @@ li
   background-color: transparent;
 
   font-family: monospace;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 200;
   padding: 0 5px 5px 0;
   line-height: 120%;
@@ -186,7 +240,7 @@ li
 #schedule
 {
     margin: auto;
-    margin-top: 15px;
+    margin-top: 18px;
     padding: 0;
    	border: 1px solid black;
    	outline: 0;
