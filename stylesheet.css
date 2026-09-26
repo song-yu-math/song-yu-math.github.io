@@ -274,3 +274,147 @@ li
    	border: 1px solid black;
 	padding: 5px 10px 5px 10px;
 }
+
+
+/* Title spacing only; its original typography is preserved. */
+#headdd {
+  margin: 20px 0 60px;
+  padding-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  #headdd { margin: 16px 0 30px; }
+}
+
+/* Current activities use the same list alignment as Research. */
+#content > .current-intro {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+#content > .current-activities {
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding-left: 28px;
+}
+
+.current-activities > li { margin-top: 8px; line-height: 1.5; }
+.current-activities > li:first-child { margin-top: 0; }
+
+@media (max-width: 600px) {
+  #content > .intro-copy,
+  #content > #contactinfo,
+  #content > .current-intro,
+  #content > .current-activities { margin-left: -26px; margin-right: -26px; }
+  #content > .current-activities { padding-left: 22px; }
+}
+
+/* Section spacing, scoped strictly to Research and later sections. */
+#content > h2 ~ h3 {
+  margin: 28px 0 12px;
+  padding-top: 0;
+  line-height: 1.45;
+}
+
+#content > h2 ~ ul {
+  margin-top: 12px;
+  margin-bottom: 24px;
+  padding-left: 26px;
+}
+
+#content > h2 ~ ul > li {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+#content > h2 ~ ul > li:first-child {
+  margin-top: 0;
+}
+
+#content > h2 ~ ul #paperinfo {
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding-left: 22px;
+  line-height: 1.45;
+}
+
+#content > h2 ~ ul #paperinfo > li {
+  margin-top: 4px;
+}
+
+/* Reclaim reading space below the introduction on narrow screens only. */
+@media (max-width: 600px) {
+  #content > h2,
+  #content > h2 ~ h3,
+  #content > h2 ~ p,
+  #content > h2 ~ ul,
+  #content > h2 ~ hr {
+    margin-left: -26px;
+    margin-right: -26px;
+  }
+
+  #content > h2 { line-height: 1.3; }
+  #content > h2 ~ h3 { margin-top: 26px; }
+  #content > h2 ~ ul { padding-left: 22px; }
+  #content > h2 ~ ul #paperinfo { padding-left: 16px; }
+  #content > h2 ~ hr { width: auto; }
+}
+
+/* Research: distinguish topic breaks, paper breaks, and lines of detail. */
+#content > h2.research-heading {
+  padding-bottom: 0;
+  margin-bottom: 14px;
+}
+
+#content > h2 ~ p.research-links {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#content > h2 ~ h3.research-topic {
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+#content > .research-links + h3.research-topic { margin-top: 20px; }
+
+#content > h2 ~ ul.research-papers {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 28px;
+}
+
+#content > h2 ~ ul.research-papers > li {
+  margin-top: 16px;
+  line-height: 1.45;
+}
+
+#content > h2 ~ ul.research-papers > li:first-child { margin-top: 0; }
+
+.research-papers .paper-details {
+  margin-top: 3px;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.4;
+}
+
+.research-papers .paper-details p { margin: 0; }
+.research-papers .paper-details p + p { margin-top: 2px; }
+.research-papers .paper-meta a { white-space: nowrap; }
+.research-papers .meta-separator {
+  color: #555;
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 0;
+}
+
+@media (max-width: 600px) {
+  #content > h2 ~ h3.research-topic {
+    margin-top: 26px;
+    margin-bottom: 10px;
+  }
+  #content > .research-links + h3.research-topic { margin-top: 20px; }
+  #content > h2 ~ ul.research-papers { padding-left: 22px; }
+  #content > h2 ~ ul.research-papers > li { margin-top: 16px; }
+  #content > h2 ~ ul.research-papers > li:first-child { margin-top: 0; }
+}
